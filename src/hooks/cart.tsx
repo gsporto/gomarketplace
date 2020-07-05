@@ -99,6 +99,10 @@ const CartProvider: React.FC = ({ children }) => {
               : { ...currentProduct, quantity: currentProduct.quantity - 1 },
           ),
         );
+      } else if (productExists && productExists.quantity === 1) {
+        setProducts(
+          products.filter(currentProduct => currentProduct.id !== id),
+        );
       }
 
       await AsyncStorage.setItem(
