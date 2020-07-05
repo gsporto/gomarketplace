@@ -72,7 +72,7 @@ const Cart: React.FC = () => {
           keyExtractor={item => item.id}
           ListFooterComponent={<View />}
           ListFooterComponentStyle={{
-            height: 80,
+            minHeight: 80,
           }}
           renderItem={({ item }: { item: Product }) => (
             <Product>
